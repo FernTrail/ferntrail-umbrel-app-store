@@ -1,0 +1,7 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">BitGarth</title>
+  <desc id="desc">BitGarth app icon for the FernTrail Umbrel app store</desc>
+  <rect width="256" height="256" fill="#101820"/>
+  <path d="M64 72h80c24 0 40 14 40 35 0 13-6 24-17 30 15 6 25 18 25 36 0 27-20 43-52 43H64V72zm44 56h29c11 0 18-6 18-16s-7-16-18-16h-29v32zm0 64h33c14 0 22-7 22-19 0-13-8-20-22-20h-33v39z" fill="#F2C94C"/>
+  <path d="M45 48h166v28H45V48zm0 132h166v28H45v-28z" fill="#4FB3A3"/>
+</svg>

@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: ferntrail-bitgarth
+category: finance
+name: BitGarth
+version: "0.1.5"
+tagline: Self-hosted crypto accounting exports
+description: >-
+  BitGarth downloads Bitcoin and Ethereum self-custody transactions into an
+  encrypted local database, then exports plain-text accounting files your tools
+  and AI can read.
+developer: FernTrail B.V.
+website: https://bitgarth.app
+dependencies: []
+repo: https://github.com/ferntrail/ferntrail-umbrel-app-store
+support: mailto:hello@bitgarth.app
+port: 8080
+gallery: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+releaseNotes: >-
+  Initial Umbrel package for BitGarth.
+submitter: FernTrail B.V.
