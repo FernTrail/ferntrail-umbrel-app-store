@@ -2,6 +2,7 @@ manifestVersion: 1
 id: ferntrail-bitgarth
 category: finance
 name: BitGarth
+icon: https://bitgarth.app/assets/favicon/icon-512.png
 version: "0.1.5"
 tagline: Self-hosted crypto accounting exports
 description: >-
@@ -11,9 +12,9 @@ description: >-
 developer: FernTrail B.V.
 website: https://bitgarth.app
 dependencies: []
-repo: https://github.com/ferntrail/ferntrail-umbrel-app-store
+repo: ""
 support: mailto:hello@bitgarth.app
-port: 8080
+port: 8390
 gallery: []
 path: ""
 defaultUsername: ""
