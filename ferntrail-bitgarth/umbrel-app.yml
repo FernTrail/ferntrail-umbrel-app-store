@@ -15,7 +15,11 @@ dependencies: []
 repo: ""
 support: mailto:hello@bitgarth.app
 port: 8390
-gallery: []
+gallery:
+  - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/1.jpg
+  - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/2.jpg
+  - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/3.jpg
+  - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/4.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
