@@ -7,7 +7,7 @@ services:
       APP_PORT: 8080
 
   web:
-    image: bitgarth/bitgarth:0.1.5@sha256:0dc38f778db1894092ef0d9d3887552495cc65ed14652bb062f74d917aec03cb
+    image: bitgarth/bitgarth:0.1.6@sha256:c6a7170ee02d263a897c6da33545ae99320388a891481dcf3a22e484373a31a9
     restart: on-failure
     stop_grace_period: 1m
     volumes:

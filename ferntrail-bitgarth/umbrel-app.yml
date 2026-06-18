@@ -3,12 +3,28 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.1.5"
+version: "0.1.6"
 tagline: Self-hosted crypto accounting exports
 description: >-
-  BitGarth downloads Bitcoin and Ethereum self-custody transactions into an
-  encrypted local database, then exports plain-text accounting files your tools
-  and AI can read.
+  BitGarth turns your self-custody crypto into clean, plain-text accounting —
+  without an account, an email, or a third party holding your keys.
+
+
+  Point it at your Bitcoin xpubs and Ethereum addresses and it pulls the
+  transactions, classifies them, and keeps your balances in sync — never
+  touching a seed phrase or private key. Search 17,000+ assets to track
+  balances you hold elsewhere, and your whole crypto net worth reads as one
+  number, worked out locally.
+
+
+  Everything — wallet data, labels, settings, saved API keys — lives in an
+  encrypted database that opens with your password, and only your password. We
+  cannot unlock it for you, and that is the point: keep a backup.
+
+
+  Plain text out: accounting journals that both hledger and ledger-cli read —
+  and so can humans, Git, and every LLM. Your numbers, in a quiet garden of
+  your own.
 developer: FernTrail B.V.
 website: https://bitgarth.app
 dependencies: []
@@ -24,5 +40,10 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: >-
-  Initial Umbrel package for BitGarth.
+  Wallet reports now value your holdings using real market prices pulled from
+  data providers, instead of relying only on manual or zero prices. New: a
+  year-dial to pick the date range on the Wallets page, transactions default to
+  the current year with simpler filters, and price sources are shown in reports.
+  Fixes: zero balances no longer skew report prices, manual asset assertions
+  carry forward across years, and identicon line glyphs render correctly.
 submitter: FernTrail B.V.
