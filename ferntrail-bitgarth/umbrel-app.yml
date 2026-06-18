@@ -39,11 +39,21 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
-releaseNotes: >-
+releaseNotes: |
   Wallet reports now value your holdings using real market prices pulled from
-  data providers, instead of relying only on manual or zero prices. New: a
-  year-dial to pick the date range on the Wallets page, transactions default to
-  the current year with simpler filters, and price sources are shown in reports.
-  Fixes: zero balances no longer skew report prices, manual asset assertions
-  carry forward across years, and identicon line glyphs render correctly.
+  data providers, instead of relying only on manual or zero prices.
+
+  New:
+
+  - A year-dial to pick the date range on the Wallets page
+  - Transactions default to the current year with simpler filters
+  - Price sources are now shown in reports
+
+  Fixes:
+
+  - Zero balances no longer skew report prices
+  - Manual asset assertions carry forward across years
+  - Identicon line glyphs render correctly
+
+  Full release notes: https://bitgarth.app/releases.html#0.1.6
 submitter: FernTrail B.V.
