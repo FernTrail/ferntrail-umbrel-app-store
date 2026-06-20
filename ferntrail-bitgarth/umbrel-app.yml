@@ -3,7 +3,7 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.1.6"
+version: "0.1.7"
 tagline: Self-hosted crypto accounting exports
 description: >-
   BitGarth turns your self-custody crypto into clean, plain-text accounting —
@@ -40,20 +40,19 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  Wallet reports now value your holdings using real market prices pulled from
-  data providers, instead of relying only on manual or zero prices.
+  The free tier now has a clear limit on synced accounts, and BitGarth prompts
+  you to upgrade when you reach it.
 
   New:
 
-  - A year-dial to pick the date range on the Wallets page
-  - Transactions default to the current year with simpler filters
-  - Price sources are now shown in reports
+  - Account limits on the free tier, with prompts that link to the Upgrade page
+  - Each paid plan's terms now appear beside its card, with whole-dollar yearly pricing
 
   Fixes:
 
-  - Zero balances no longer skew report prices
-  - Manual asset assertions carry forward across years
-  - Identicon line glyphs render correctly
+  - Wallet lookups surface CoinGecko rate-limit messages, not a generic error
+  - More reliable manual-asset price lookups, with caching when no API key is set
+  - UI polish across notice surfaces, account-list accents, and section numbering
 
-  Full release notes: https://bitgarth.app/releases.html#0.1.6
+  Full release notes at https://bitgarth.app/releases.html#0.1.7
 submitter: FernTrail B.V.
