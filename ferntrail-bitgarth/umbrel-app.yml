@@ -3,7 +3,7 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.1.7"
+version: "0.1.8"
 tagline: Self-hosted crypto accounting exports
 description: >-
   BitGarth turns your self-custody crypto into clean, plain-text accounting —
@@ -40,19 +40,27 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  The free tier now has a clear limit on synced accounts, and BitGarth prompts
-  you to upgrade when you reach it.
+  Self-hosted installs now hold to the correct free-tier limits on their own:
+  refreshing when they can reach our servers, and keeping the last known limits
+  when they can't.
 
   New:
 
-  - Account limits on the free tier, with prompts that link to the Upgrade page
-  - Each paid plan's terms now appear beside its card, with whole-dollar yearly pricing
+  - Free-tier limits stay accurate on self-hosted installs without a constant connection
+  - Manual accounts can now use assets BitGarth already tracks in synced wallets, including Bitcoin and Ethereum
+  - Umbrel users get in-app update notices pointing to the Umbrel app store
+  - Hosted free users are told how inactive data is retained and removed
 
   Fixes:
 
-  - Wallet lookups surface CoinGecko rate-limit messages, not a generic error
-  - More reliable manual-asset price lookups, with caching when no API key is set
-  - UI polish across notice surfaces, account-list accents, and section numbering
+  - Missing pages return a proper "not found" response
+  - Manual asset search keeps its original ordering and result counts
+  - Wallet rows no longer show confusing account-usage text
 
-  Full release notes at https://bitgarth.app/releases.html#0.1.7
+  Notes:
+
+  - The free tier now allows 50 accounts
+  - Balance assertions and hledger export are included on Free; full transaction-history sync stays paid
+
+  Full release notes at https://bitgarth.app/releases.html#0.1.8
 submitter: FernTrail B.V.
