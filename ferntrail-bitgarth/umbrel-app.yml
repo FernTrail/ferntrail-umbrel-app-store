@@ -3,7 +3,7 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.1.8"
+version: "0.1.9"
 tagline: Self-hosted crypto accounting exports
 description: >-
   BitGarth turns your self-custody crypto into clean, plain-text accounting —
@@ -36,31 +36,30 @@ gallery:
   - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/2.jpg
   - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/3.jpg
   - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/4.jpg
+  - https://raw.githubusercontent.com/FernTrail/ferntrail-umbrel-app-store/refs/heads/main/ferntrail-bitgarth/gallery/5.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  Self-hosted installs now hold to the correct free-tier limits on their own:
-  refreshing when they can reach our servers, and keeping the last known limits
-  when they can't.
+  The new Holdings Report shows how every wallet moved over a date range you
+  choose: opening value, closing value, and total change in one view.
 
   New:
 
-  - Free-tier limits stay accurate on self-hosted installs without a constant connection
-  - Manual accounts can now use assets BitGarth already tracks in synced wallets, including Bitcoin and Ethereum
-  - Umbrel users get in-app update notices pointing to the Umbrel app store
-  - Hosted free users are told how inactive data is retained and removed
+  - Open the Holdings Report from the Reports section to compare wallet values
+  - Name accounts when adding xpubs, Bitcoin addresses, Ethereum addresses, or manual assets
+  - Set an account prefix in the hledger export settings before exporting
+  - Add a price override on the free tier when a report is missing a price
 
   Fixes:
 
-  - Missing pages return a proper "not found" response
-  - Manual asset search keeps its original ordering and result counts
-  - Wallet rows no longer show confusing account-usage text
+  - Historical price lookups are steadier over daily ranges and back off when providers ask BitGarth to slow down
+  - Long sync error messages stay readable, and each sync row opens straight to its record
+  - Holdings Report totals include manual assets alongside synced wallets
 
   Notes:
 
-  - The free tier now allows 50 accounts
-  - Balance assertions and hledger export are included on Free; full transaction-history sync stays paid
+  - On the free tier the Holdings Report always covers a rolling nine-month window
 
-  Full release notes at https://bitgarth.app/releases.html#0.1.8
+  Full release notes at https://bitgarth.app/releases.html#0.1.9
 submitter: FernTrail B.V.
