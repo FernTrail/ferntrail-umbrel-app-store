@@ -4,27 +4,28 @@ category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
 version: "0.2.0"
-tagline: Self-hosted crypto accounting exports
+tagline: Local-first crypto portfolio tracker
 description: >-
-  BitGarth turns your self-custody crypto into clean, plain-text accounting —
-  without an account, an email, or a third party holding your keys.
+  BitGarth is a free, local-first portfolio tracker for your own Bitcoin and
+  Ethereum wallets. Create local users on your Umbrel — no central BitGarth
+  account, email address, seed phrase, or private key is required.
 
 
-  Point it at your Bitcoin xpubs and Ethereum addresses and it pulls the
-  transactions, classifies them, and keeps your balances in sync — never
-  touching a seed phrase or private key. Search 17,000+ assets to track
-  balances you hold elsewhere, and your whole crypto net worth reads as one
-  number, worked out locally.
+  Add Bitcoin xpubs and Ethereum addresses for balance sync, track manual
+  assets, see your net worth in your own currency, and export plain-text
+  accounting files for hledger and ledger-cli.
 
 
-  Everything — wallet data, labels, settings, saved API keys — lives in an
-  encrypted database that opens with your password, and only your password. We
-  cannot unlock it for you, and that is the point: keep a backup.
+  Your wallet data, labels, settings, and saved API keys stay in an encrypted
+  local database protected by your password. BitGarth cannot unlock it for
+  you, so keep a backup.
 
 
-  Plain text out: accounting journals that both hledger and ledger-cli read —
-  and so can humans, Git, and every LLM. Your numbers, in a quiet garden of
-  your own.
+  An optional paid plan adds Bitcoin and Ethereum transaction-history backfill
+  and reports to support tax filing. Upgrading does not create a central user
+  account: BitGarth verifies payment and subscription identifiers that are
+  separate from local app users with its entitlement service, while your
+  portfolio and transaction data stay in your app instance.
 developer: FernTrail B.V.
 website: https://bitgarth.app
 dependencies: []
