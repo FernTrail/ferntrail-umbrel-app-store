@@ -3,7 +3,7 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.1.9"
+version: "0.2.0"
 tagline: Self-hosted crypto accounting exports
 description: >-
   BitGarth turns your self-custody crypto into clean, plain-text accounting —
@@ -41,25 +41,24 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  The new Holdings Report shows how every wallet moved over a date range you
-  choose: opening value, closing value, and total change in one view.
+  Account pages now open with an identity strip that shows what they track,
+  and upgrading starts transaction-history sync straight away with live
+  progress. The Payments page keeps your current plan visible while plan data
+  loads or is unavailable.
 
   New:
 
-  - Open the Holdings Report from the Reports section to compare wallet values
-  - Name accounts when adding xpubs, Bitcoin addresses, Ethereum addresses, or manual assets
-  - Set an account prefix in the hledger export settings before exporting
-  - Add a price override on the free tier when a report is missing a price
+  - Expand the account identity strip to copy the full reference or see its addresses
+  - Tell same-xpub accounts apart by address type and shortened reference
+  - Read plain-language plan summaries, with the free tier shown as $0 free
+  - Reach BitGarth by email or PGP public key from the sidebar
+  - Get a clear result every time you press the sync button
 
   Fixes:
 
-  - Historical price lookups are steadier over daily ranges and back off when providers ask BitGarth to slow down
-  - Long sync error messages stay readable, and each sync row opens straight to its record
-  - Holdings Report totals include manual assets alongside synced wallets
+  - Empty transaction history shows no invented opening balance
+  - Sync status settles correctly after an upgrade
+  - Wallets and transactions show the same sync mark for an account
 
-  Notes:
-
-  - On the free tier the Holdings Report always covers a rolling nine-month window
-
-  Full release notes at https://bitgarth.app/releases.html#0.1.9
+  Full release notes at https://bitgarth.app/releases.html#0.2.0
 submitter: FernTrail B.V.
