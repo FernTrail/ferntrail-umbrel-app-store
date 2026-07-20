@@ -3,10 +3,10 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.2.0"
+version: "0.2.1"
 tagline: Local-first crypto portfolio tracker
 description: >-
-  BitGarth is a free, local-first portfolio tracker for your own Bitcoin and
+  BitGarth is a local-first portfolio tracker for your own Bitcoin and
   Ethereum wallets. Create local users on your Umbrel — no central BitGarth
   account, email address, seed phrase, or private key is required.
 
@@ -42,24 +42,31 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  Account pages now open with an identity strip that shows what they track,
-  and upgrading starts transaction-history sync straight away with live
-  progress. The Payments page keeps your current plan visible while plan data
-  loads or is unavailable.
+  - Various transaction history fixes: accounts that were missing older
+    transactions are found and completed automatically.
+  - Synced Ethereum transactions could show the wrong amount when a
+    transaction moved ETH internally more than once. This is fixed, and
+    history you already synced repairs itself automatically.
 
-  New:
+  Fixed:
 
-  - Expand the account identity strip to copy the full reference or see its addresses
-  - Tell same-xpub accounts apart by address type and shortened reference
-  - Read plain-language plan summaries, with the free tier shown as $0 free
-  - Reach BitGarth by email or PGP public key from the sidebar
-  - Get a clear result every time you press the sync button
+  - An account syncing its transaction history for the first time could miss
+    its older transactions if its balances had already been tracked for a
+    while. The full history now downloads, and every installation re-checks
+    its accounts and finishes any history that was left incomplete.
+  - Ethereum transactions that move ETH internally more than once — common
+    with contract interactions — could record only one of those movements, so
+    amounts and balances came out wrong. All movements are now kept, and
+    existing history is rebuilt from data BitGarth already has.
+  - An account whose transaction history is only partly downloaded now shows
+    "Not available" as its opening balance instead of a number computed from
+    the incomplete history.
+  - The opening balance no longer flips to "Not available" when you view a
+    period with no transactions on an account that does have history.
+  - An account whose balance had not come through yet now fetches it on the
+    next sync, instead of waiting for new activity on the network.
+  - Pressing Sync now reports what the sync actually did, even when tidy-up
+    work afterwards fails.
 
-  Fixes:
-
-  - Empty transaction history shows no invented opening balance
-  - Sync status settles correctly after an upgrade
-  - Wallets and transactions show the same sync mark for an account
-
-  Full release notes at https://bitgarth.app/releases.html#0.2.0
+  Full release notes at https://bitgarth.app/releases.html#0.2.1
 submitter: FernTrail B.V.
