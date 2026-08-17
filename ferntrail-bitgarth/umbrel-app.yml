@@ -3,7 +3,7 @@ id: ferntrail-bitgarth
 category: finance
 name: BitGarth
 icon: https://bitgarth.app/assets/favicon/icon-512.png
-version: "0.2.2"
+version: "0.3.0"
 tagline: Local-first crypto portfolio tracker
 description: >-
   BitGarth is a local-first portfolio tracker for your own Bitcoin and
@@ -42,40 +42,50 @@ path: ""
 defaultUsername: ""
 defaultPassword: ""
 releaseNotes: |
-  - Bitcoin accounts whose transaction history was left incomplete repair
-    themselves: every installation re-checks its Bitcoin accounts once after
-    this upgrade and downloads the history that is missing.
-  - A historical balance is only presented as final when the transactions
-    behind it are complete. Balances that were worked backwards from the
-    current balance could be wrong; they no longer appear as if they were
-    certain.
-  - Balance-only accounts now show the current balance and when it was last
-    checked, instead of historical balances that need a full transaction
-    history.
+  - BitGarth's source code is now published. Every release is built from a
+    public commit you can read, audit, and build yourself.
+  - A new `bitgarth` command-line client reads your wallet balances from a
+    terminal. You pair it once in your browser. In this release it shows
+    balances; later releases will give it more to do.
+  - A Bitcoin account that reached its per-account transaction limit no longer
+    shows "Syncing" forever.
 
   New:
 
-  - Balance-only accounts show "Current balance as of {time}" at the top of
-    the transactions page.
-  - An account with missing transaction history now says roughly how many
-    transactions are unsynced.
-  - The current and latest version numbers on the Settings page link to their
-    release notes.
+  - The `bitgarth` command-line client prints a balance sheet of your wallets.
+    Run `bitgarth pair`, open the approval link it prints, approve it in
+    BitGarth, then run `bitgarth balancesheet` (short: `bs`).
+  - Ready-to-run downloads of the CLI for Linux, macOS on Apple Silicon, and
+    Windows are attached to each release, with checksums. You can also build it
+    from source.
+  - The CLI keeps a profile per BitGarth you connect to, so one machine can
+    reach several installs. Manage them with `bitgarth profile list`,
+    `bitgarth profile rename`, and `bitgarth profile remove`.
+  - **Settings → Paired Clients** lists everything you have paired, with when it
+    was created, when it expires, and when it was last used. Revoking one cuts
+    off its access immediately, without affecting your password or your other
+    paired clients.
+  - The CLI requires HTTPS by default, and will not send its credentials over
+    plain HTTP unless you allow that explicitly.
 
   Fixed:
 
-  - A Bitcoin account tracking an xpub now spreads its history download across
-    the account's addresses, newest transactions first, instead of letting the
-    older transactions of one address use up the whole allowance.
-  - Opening and closing balances calculated back from the current balance
-    could be wrong whenever a newer transaction was missing. A balance is now
-    taken from complete history or shown as "Not available".
-  - Balance assertions in hledger exports now set the account balance directly.
-    They were written as a difference from the previous assertion, which came
-    out wrong when transactions fell between the two.
-  - A page that loads several things at once no longer mixes data from before
-    and after a background update, so everything on screen comes from the same
-    moment.
+  - A Bitcoin account that hit its per-account transaction limit stayed marked
+    "Syncing" indefinitely and kept re-running sync in the background. It now
+    settles once the permitted history has downloaded, and the history still
+    waiting is picked up later if that limit is raised.
+  - Refreshing your wallets or checking for a new version could break the page
+    until you reloaded it.
 
-  Full release notes at https://bitgarth.app/releases.html#0.2.2
+  Notes:
+
+  - BitGarth is published under the Functional Source License 1.1
+    (FSL-1.1-ALv2). Each release additionally becomes available under the Apache
+    License 2.0 on its second anniversary.
+  - BitGarth's internal web addresses moved from `/api/v1/` to `/_app/`, and its
+    health check is now `/health`. If you self-host behind a reverse proxy that
+    filters or rewrites paths, allow `/_app/` and `/health`. Hosted, Umbrel, and
+    plain Docker installs need no change.
+
+  Full release notes at https://bitgarth.app/releases.html#0.3.0
 submitter: FernTrail B.V.
