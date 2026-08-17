@@ -29,7 +29,7 @@ description: >-
 developer: FernTrail B.V.
 website: https://bitgarth.app
 dependencies: []
-repo: ""
+repo: https://github.com/BitGarth/bitgarth
 support: mailto:hello@bitgarth.app
 port: 8390
 gallery:

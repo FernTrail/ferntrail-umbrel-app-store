@@ -44,12 +44,10 @@ tax filing. Upgrading does not create a central account.
 ## Source and licensing
 
 This packaging repository is public so you can see exactly what Umbrel installs
-and how it is configured. The BitGarth application itself is not open source —
-its source code and container image stay with FernTrail B.V., and use is governed
-by the [BitGarth Terms](https://bitgarth.app/terms.html).
-
-The `repo` field in the app manifest is left empty on purpose: it points at an
-upstream source repository, and this repository holds the packaging only.
+and how it is configured. The [BitGarth application source code](https://github.com/BitGarth/bitgarth)
+is published under the Functional Source License 1.1 (FSL-1.1-ALv2). Each
+release becomes available under the Apache License 2.0 on its second
+anniversary.
 
 ## Support and security
 
